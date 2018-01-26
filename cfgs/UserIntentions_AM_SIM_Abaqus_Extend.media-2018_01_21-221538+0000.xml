@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Media>
+	<SetVariable name="SelectProduct" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?DOC_SIM_EstPrd.AllOS_812" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?SIMULIA_Flexnet.Linux64_2" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?SIMULIA_AbaqusServices.Linux64_137" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?CAA_SIMULIA_AbaqusServices.Linux64_167" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?SIMULIA_Abaqus_CAE.Linux64_1" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?SIMULIA_Tosca.Linux64_3" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" name="SelectProduct?SIMULIA_Isight.Linux64_404" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" itId="Documentation_SIMULIA" name="TARGET_PATH" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SIMULIA2017doc"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="FinishPanel" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMCAE_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMISDT_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMISEE_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMISTA_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMTOSE_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMTOFE_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="DOC\English\SIM_EstPrd.media" name="SelectProduct?DOC\English\SIMFESD_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromFeature="DOC\English\SIM_EstPrd.media" name="DSYWelcomePanel" setByUser="true" setType="default">
+        <SetWelcome value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" itId="SIMULIA_Compute" name="TARGET_PATH" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SimulationServices/V6R2017x"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="FinishPanel" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CODE\linux_a64\SIMAQSL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CODE\linux_a64\SIMAQXL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CODE\linux_a64\SIMCSS_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CODE\linux_a64\SIMODB_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" itId="SIMULIA_Compute" name="TARGET_PATH" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SimulationServices/V6R2017x"/>
+	</SetVariable>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="FinishPanel" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct" setByUser="true" setType="default"/>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CAA\linux_a64\SIMAQSL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CAA\linux_a64\SIMAQXL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CAA\linux_a64\SIMCSS_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="SelectProduct?CAA\linux_a64\SIMODB_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+</Media>

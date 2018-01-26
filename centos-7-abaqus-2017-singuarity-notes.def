@@ -1,0 +1,34 @@
+# sudo singularity build test.img centos-7-abaqus-2017-singuarity-notes.def
+BootStrap: docker
+From: centos:7
+
+%setup
+    mkdir ${SINGULARITY_ROOTFS}/iso-unpacked/
+    bsdtar xf Abaqus2017.iso -C ${SINGULARITY_ROOTFS}/iso-unpacked/
+    mkdir ${SINGULARITY_ROOTFS}/cfgs/
+    cp cfgs/UserIntentions_DOC.xml ${SINGULARITY_ROOTFS}/cfgs/
+    cp cfgs/simulation-services-UserIntentions_CODE.xml ${SINGULARITY_ROOTFS}/cfgs/
+    cp cfgs/cae-UserIntentions_CODE.xml ${SINGULARITY_ROOTFS}/cfgs/
+    cp cfgs/UserIntentions_CAA_Additional.xml ${SINGULARITY_ROOTFS}/cfgs/
+    cp "cfgs/UserIntentions_AM_SIM_Abaqus_Extend.media-2018_01_21-214003+0000.xml" ${SINGULARITY_ROOTFS}/cfgs/
+
+%post
+    cd /iso-unpacked/
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    yum install -y ksh redhat-lsb-core perl && yum clean all && rm -rf /var/cache/yum
+    ksh ./1/SIMULIA_Documentation/AllOS/1/StartTUI.sh --silent /cfgs/UserIntentions_DOC.xml
+    ksh ./2/SIMULIA_AbaqusServices/Linux64/1/StartTUI.sh --silent /cfgs/simulation-services-UserIntentions_CODE.xml  # GENERATE
+    ksh ./2/SIMULIA_Abaqus_CAE/Linux64/1/StartTUI.sh --silent /cfgs/cae-UserIntentions_CODE.xml  # GENERATE
+    ksh ./2/SIMULIA_AbaqusServices_CAA_API/Linux64/1/StartTUI.sh --silent /cfgs/UserIntentions_CAA_Additional.xml
+    ksh ./2/SIMULIA_FLEXnet_LicenseServer/Linux64/1/StartTUI.sh --silent /cfgs/UserIntentions_AM_SIM_Abaqus_Extend.media-2018_01_21-214003+0000.xml
+
+#%environment
+#    export LC_ALL=C
+#    export PATH=/usr/games:$PATH
+
+%runscript
+    abaqus cae
+
+%labels
+Maintainer willfurnass
+Version v0.1

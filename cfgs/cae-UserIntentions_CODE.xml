@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Media mediaLevel="419" mediaName="CODE\linux_a64\SIMULIA_Abaqus_CAE.media\media">
+	<SetVariable name="browseAnyway_differentSolver" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SimulationServices/V6R2017x"/>
+	</SetVariable>
+	<SetVariable name="commandsDir" setByUser="true" setType="default">
+		<SetPath value="/var/DassaultSystemes/SIMULIA/Commands"/>
+	</SetVariable>
+	<SetVariable name="pluginsDir" setByUser="true" setType="default">
+		<SetPath value="/var/DassaultSystemes/SIMULIA/CAE/plugins/2017"/>
+	</SetVariable>
+	<SetVariable name="serverType_radioButton" setByUser="true" setType="default"/>
+	<SetVariable name="serverType_radioButton?flex" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable name="serverType_radioButton?dsls" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable name="licenseServer1" setByUser="true" setType="default">
+		<SetText value="abaquslm.sheffield.ac.uk"/>
+	</SetVariable>
+	<SetVariable name="licenseServer2" setByUser="true" setType="default">
+		<SetText value=""/>
+	</SetVariable>
+	<SetVariable name="licenseServer3" setByUser="true" setType="default">
+		<SetText value=""/>
+	</SetVariable>
+	<SetVariable name="docConfigType" setByUser="true" setType="default"/>
+	<SetVariable name="docConfigType?docConfigType_path" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable name="docConfigType?docConfigType_URL" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable name="docConfigType?docConfigType_none" setByUser="true" setType="default">
+		<SetBoolean value="false"/>
+	</SetVariable>
+	<SetVariable name="docRootPath" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SIMULIA2017doc"/>
+	</SetVariable>
+	<SetVariable name="TARGET_PATH" setByUser="true" setType="default">
+		<SetPath value="/usr/SIMULIA/CAE/2017"/>
+	</SetVariable>
+	<SetVariable name="FinishPanel" setByUser="true" setType="default"/>
+</Media>

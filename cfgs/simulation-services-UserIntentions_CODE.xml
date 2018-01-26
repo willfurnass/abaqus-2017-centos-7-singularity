@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Media mediaLevel="419" mediaName="CODE\linux_a64\SIMULIA_AbaqusServices.media\media">
+	<SetVariable name="TARGET_PATH" setByUser="true" setType="default">
+		<SetPath value="/usr/DassaultSystemes/SimulationServices/V6R2017x"/>
+	</SetVariable>
+	<SetVariable name="FinishPanel" setByUser="true" setType="default"/>
+	<SetVariable name="SelectProduct" setByUser="true" setType="default"/>
+	<SetVariable name="SelectProduct?CODE\linux_a64\SIMAQSL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable name="SelectProduct?CODE\linux_a64\SIMAQXL_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable name="SelectProduct?CODE\linux_a64\SIMCSS_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+	<SetVariable name="SelectProduct?CODE\linux_a64\SIMODB_TP.prd" setByUser="true" setType="default">
+		<SetBoolean value="true"/>
+	</SetVariable>
+</Media>
