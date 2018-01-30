@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Media mediaLevel="419" mediaName="DOC\English\SIM_EstPrd.media\media">
 	<SetVariable name="TARGET_PATH" setByUser="true" setType="default">
-		<SetPath value="/usr/DassaultSystemes/SIMULIA2017doc"/>
+            <SetPath value="/opt/abaqus/2017/Documentation"/>
 	</SetVariable>
 	<SetVariable name="FinishPanel" setByUser="true" setType="default"/>
 	<SetVariable name="SelectProduct" setByUser="true" setType="default"/>
