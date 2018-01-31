@@ -2,9 +2,9 @@ BootStrap: docker
 From: centos:7
 
 %setup
-    mkdir ${SINGULARITY_ROOTFS}/iso-unpacked/
+    mkdir -p ${SINGULARITY_ROOTFS}/iso-unpacked/
     bsdtar xf Abaqus2017.iso -C ${SINGULARITY_ROOTFS}/iso-unpacked/
-    mkdir ${SINGULARITY_ROOTFS}/cfgs/
+    mkdir -p ${SINGULARITY_ROOTFS}/cfgs/
     cp assets/VirtualGL.repo ${SINGULARITY_ROOTFS}/etc/yum.repos.d
     cp assets/UserIntentions_DOC.xml ${SINGULARITY_ROOTFS}/cfgs/
     cp assets/simulation-services-UserIntentions_CODE.xml ${SINGULARITY_ROOTFS}/cfgs/
@@ -14,7 +14,7 @@ From: centos:7
 %post
     cd /iso-unpacked/
     rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-    yum install -y ksh redhat-lsb-core perl VirtualGL
+    yum install -y ksh redhat-lsb-core perl VirtualGL libjpeg-turbo
     yum clean all && rm -rf /var/cache/yum
     ksh ./1/SIMULIA_Documentation/AllOS/1/StartTUI.sh --silent /cfgs/UserIntentions_DOC.xml
     ksh ./2/SIMULIA_AbaqusServices/Linux64/1/StartTUI.sh --silent /cfgs/simulation-services-UserIntentions_CODE.xml
@@ -25,7 +25,7 @@ From: centos:7
     export PATH=/opt/abaqus/2017/Commands:$PATH
 
 %runscript
-    abaqus cae
+    vglrun abaqus cae
 
 %labels
 Maintainer willfurnass
