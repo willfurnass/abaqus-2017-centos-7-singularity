@@ -44,7 +44,7 @@ I need to prefix the above command(s) with `optirun` to ensure I use my NVIDIA G
 Alternatively, to run Abaqus without hardware-accelerated graphics:
 
 ```bash
-singularity exec --nv mysandbox abaqus cae -mesa
+singularity exec --nv abaqus-2017-centos-7.img abaqus cae -mesa
 ```
 
 ## How the 'UserIntentions' files were generated
