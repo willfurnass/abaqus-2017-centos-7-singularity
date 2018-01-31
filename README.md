@@ -4,26 +4,51 @@ Abaqus works well under Centos but is much less likely to work well under a blee
 
 ## Building the container
 
-We unpack the installer ISO during the build then kick off the Abaqus installer, using 'UserIntentions' files to automate the install.
+First, ensure that the license server(s) listed in `assets/cae-UserIntentions_CODE.xml` (see `licenseServer1`/`licenseServer2`/`licenseServer3` in that file) are accessible i.e. if they are only reachable after bringing up a VPN connection, then bring that up now.
 
+Next, if `/tmp` is 'small' (e.g. 'only' 16GB) then Singularity will run out of space when trying to build your Abaqus image, so you may want to create a directory somewhere else for Singularity to write temporary files to:
 
-```sh
-# Set the Singularity cache dir to somewhere with lots of space; 
-# by default Singularity uses /tmp for temp files, which is 'only' 16GB on my laptop (too small in this case)
-mkdir -p m 0700 $HOME/.cache/singularity 
+```bash
+mkdir -p -m 0700 $HOME/.cache/singularity 
+```
 
-sudo SINGULARITY_CACHEDIR=$HOME/.cache/singularity singularity build test.img centos-7-abaqus-2017-singuarity-notes.def
+Right, let's start building our Singularity image.  The build process as defined in our `.def` file:
+
+1. Unpacks the installer ISO;
+2. Installs install-time and run-time OS dependencies.  The run-time dependencies include VirtualGL and libjpeg-turbo.
+3. Kicks off the Abaqus installer, using 'UserIntentions' files to automate the install.
+
+```bash
+sudo SINGULARITY_TMPDIR=$HOME/.cache/singularity singularity build abaqus-2017-centos-7.img abaqus-2017-centos-7.def
 ```
 
 ## Running the container
 
-sudo singularity shell --bind some/dir:/iso-unpacked another/dir:/cfgs centos-7-abaqus-2017-singuarity-sandbox
+To run Abaqus CAE with (NVIDIA) hardware-accelerated graphics:
+
+```
+singularity run --nv abaqus-2017-centos-7.img 
+```
+
+which is equivalent to:
+
+```
+singularity exec --nv abaqus-2017-centos-7.img vglrun abaqus cae
+```
+
+I need to prefix the above command(s) with `optirun` to ensure I use my NVIDIA GPU and not my on-board graphics chip.
+
+Alternatively, to run Abaqus without hardware-accelerated graphics:
+
+```bash
+singularity exec --nv mysandbox abaqus cae -mesa
+```
 
 ## How the 'UserIntentions' files were generated
 
 These were produced by going through the Abaqus install process interactively within a Singularity 'sandbox' (writable directory-based container):
 
-```sh
+```bash
 pushd some/dir
 tar xfp Abaqus2017.iso
 popd
