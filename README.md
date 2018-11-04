@@ -24,7 +24,7 @@ Right, let's start building our Singularity image.  The build process as defined
 3. Kicks off the Abaqus installer, using 'UserIntentions' files to automate the install.
 
 ```bash
-sudo SINGULARITY_TMPDIR=$HOME/.cache/singularity singularity build abaqus-2017-centos-7.img abaqus-2017-centos-7.def
+sudo SINGULARITY_TMPDIR=$HOME/.cache/singularity singularity build ~/imgs/sing/abaqus-2017-centos-7.img abaqus-2017-centos-7.def
 ```
 
 ## Running the container
@@ -32,13 +32,13 @@ sudo SINGULARITY_TMPDIR=$HOME/.cache/singularity singularity build abaqus-2017-c
 To run Abaqus CAE with (NVIDIA) hardware-accelerated graphics:
 
 ```
-singularity run --nv abaqus-2017-centos-7.img 
+singularity run --nv ~/imgs/sing/abaqus-2017-centos-7.img 
 ```
 
 which is equivalent to:
 
 ```
-singularity exec --nv abaqus-2017-centos-7.img vglrun abaqus cae
+singularity exec --nv ~/imgs/sing/abaqus-2017-centos-7.img vglrun abaqus cae
 ```
 
 I need to prefix the above command(s) with `optirun` to ensure I use my NVIDIA GPU and not my on-board graphics chip.
@@ -46,7 +46,7 @@ I need to prefix the above command(s) with `optirun` to ensure I use my NVIDIA G
 Alternatively, to run Abaqus without hardware-accelerated graphics:
 
 ```bash
-singularity exec --nv abaqus-2017-centos-7.img abaqus cae -mesa
+singularity exec --nv ~/imgs/sing/abaqus-2017-centos-7.img abaqus cae -mesa
 ```
 
 ## How the 'UserIntentions' files were generated
